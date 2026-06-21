@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import { useScrollAnimations } from '../hooks/useScrollAnimations';
+import { useBooking } from '../hooks/useBooking';
 import './TrainersPage.css';
 
 const trainers = [
@@ -108,6 +109,7 @@ function TrainerCard({ trainer }) {
 
 function TrainersPage() {
   useScrollAnimations();
+  const openBooking = useBooking();
 
   return (
     <div className="app">
@@ -138,14 +140,9 @@ function TrainersPage() {
       <section className="trainers-cta" id="trainers-cta">
         <div className="trainers-cta__oval">
           <p className="trainers-cta__heading">Already know who you want to train with?</p>
-          <a
-            href="https://www.instagram.com/humbleloft"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="trainers-cta__btn"
-          >
-            DM TO BOOK
-          </a>
+          <button className="trainers-cta__btn" onClick={openBooking}>
+            BOOK NOW
+          </button>
         </div>
       </section>
     </div>

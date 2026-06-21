@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import { useScrollAnimations } from '../hooks/useScrollAnimations';
+import { useBooking } from '../hooks/useBooking';
 import './ContactPage.css';
 
 /* ── SVG Icons ── */
@@ -61,6 +62,7 @@ const contactMethods = [
 
 function ContactPage() {
   useScrollAnimations();
+  const openBooking = useBooking();
 
   return (
     <div className="app" data-theme="light">
@@ -113,14 +115,9 @@ function ContactPage() {
         <div className="contact-cta__oval">
           <p className="contact-cta__heading">Your first session starts with a message.</p>
           <p className="contact-cta__sub">Session packages available in 5, 10 and 20.</p>
-          <a
-            href="https://www.instagram.com/humbleloft"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-cta__btn"
-          >
-            DM @humbleloft
-          </a>
+          <button className="contact-cta__btn" onClick={openBooking}>
+            BOOK NOW
+          </button>
         </div>
       </section>
     </div>

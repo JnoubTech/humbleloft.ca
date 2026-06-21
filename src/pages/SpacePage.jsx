@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import { useScrollAnimations } from '../hooks/useScrollAnimations';
+import { useBooking } from '../hooks/useBooking';
 import './SpacePage.css';
 
 const equipmentSections = [
@@ -95,6 +96,7 @@ function AccordionItem({ section, isOpen, onToggle }) {
 function SpacePage() {
   const [openIndex, setOpenIndex] = useState(0); // First item open by default
   useScrollAnimations();
+  const openBooking = useBooking();
 
   const handleToggle = (index) => {
     setOpenIndex((prev) => (prev === index ? -1 : index));
@@ -177,14 +179,9 @@ function SpacePage() {
         <div className="space-cta__oval">
           <p className="space-cta__heading">See it for yourself.</p>
           <p className="space-cta__sub">Book your first session and experience the space</p>
-          <a
-            href="https://www.instagram.com/humbleloft"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="space-cta__btn"
-          >
-            DM TO BOOK
-          </a>
+          <button className="space-cta__btn" onClick={openBooking}>
+            BOOK NOW
+          </button>
         </div>
       </section>
     </div>

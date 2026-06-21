@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import { useScrollAnimations } from '../hooks/useScrollAnimations';
+import { useBooking } from '../hooks/useBooking';
 import './ServicePage.css';
 
 /**
@@ -17,6 +18,7 @@ import './ServicePage.css';
  */
 function ServicePage({ config }) {
   useScrollAnimations();
+  const openBooking = useBooking();
 
   const { hero, training, coach, features, cta } = config;
 
@@ -117,14 +119,9 @@ function ServicePage({ config }) {
         <div className="svc-cta__oval">
           <p className="svc-cta__heading">{cta.heading}</p>
           {cta.sub && <p className="svc-cta__sub">{cta.sub}</p>}
-          <a
-            href={cta.btnHref || 'https://www.instagram.com/humbleloft'}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="svc-cta__btn"
-          >
-            {cta.btnText || 'DM TO BOOK'}
-          </a>
+          <button className="svc-cta__btn" onClick={openBooking}>
+            {cta.btnText || 'BOOK NOW'}
+          </button>
         </div>
       </section>
     </div>

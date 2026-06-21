@@ -1,7 +1,10 @@
 import Navbar from '../components/Navbar';
+import { useBooking } from '../hooks/useBooking';
 import './AboutPage.css';
 
 function AboutPage() {
+  const openBooking = useBooking();
+
   return (
     <div className="app">
       <Navbar />
@@ -109,14 +112,9 @@ function AboutPage() {
       {/* Section 5: CTA — DM TO BOOK */}
       <section className="about-cta" id="about-cta">
         <p className="about-cta__text">No crowds. No contracts. Just training.</p>
-        <a
-          href="https://www.instagram.com/humbleloft"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="about-cta__btn"
-        >
-          DM TO BOOK
-        </a>
+        <button className="about-cta__btn" onClick={openBooking}>
+          BOOK NOW
+        </button>
       </section>
     </div>
   );
