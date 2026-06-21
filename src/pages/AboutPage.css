@@ -58,7 +58,7 @@
 .about-split__heading {
   font-family: var(--font-serif);
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  font-weight: 400;
+  font-weight: 600;
   font-style: italic;
   letter-spacing: 0.06em;
   line-height: 1.2;
