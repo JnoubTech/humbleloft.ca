@@ -63,7 +63,7 @@ function ContactPage() {
   useScrollAnimations();
 
   return (
-    <div className="app">
+    <div className="app" data-theme="light">
       <Navbar />
 
       {/* ── Get In Touch Hero ── */}

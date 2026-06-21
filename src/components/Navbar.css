@@ -18,6 +18,22 @@
               height 0.4s ease;
 }
 
+/* ── Light-page adaptation ──
+   When the page has a light background at the top, flip navbar
+   text to dark while transparent. Once scrolled, dark bg kicks in
+   and text returns to light automatically. */
+[data-theme="light"] .navbar:not(.navbar--scrolled) .navbar-links a {
+  color: var(--color-text-dark);
+}
+
+[data-theme="light"] .navbar:not(.navbar--scrolled) .navbar-links a.active {
+  color: var(--color-bg-dark);
+}
+
+[data-theme="light"] .navbar:not(.navbar--scrolled) .navbar-hamburger span {
+  background-color: var(--color-text-dark);
+}
+
 /* Scrolled state — solid background + shadow */
 .navbar--scrolled {
   background-color: rgba(27, 27, 27, 0.95);
