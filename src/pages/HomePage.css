@@ -1,0 +1,232 @@
+/* ========== Full-Page Hero Sections ========== */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  transition: transform 8s ease-out;
+}
+
+/* Video background for hero sections */
+.hero-video-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Subtle slow zoom on load */
+.hero-section:hover .hero-bg {
+  transform: scale(1.03);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(27, 27, 27, 0.25) 0%,
+    rgba(27, 27, 27, 0.45) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2.5rem;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3.5rem, 10vw, 8.5rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-text-light);
+  letter-spacing: 0.08em;
+  line-height: 1.05;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ========== CTA Buttons ========== */
+.section-btn {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text-light);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  letter-spacing: 0.04em;
+  padding: 0.6rem 0;
+  transition: color 0.3s ease, letter-spacing 0.4s ease;
+  cursor: pointer;
+}
+
+.section-btn:hover {
+  color: var(--color-accent);
+  letter-spacing: 0.08em;
+  opacity: 1;
+}
+
+/* ========== 3-Panel Grid Section (LIFT / STRIKE / FLOW) ========== */
+.panels-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.panels-video-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.panels-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(27, 27, 27, 0.3);
+  z-index: 1;
+}
+
+.panels-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  height: 100%;
+}
+
+.panel {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.panel-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.panel:hover .panel-bg {
+  transform: scale(1.08);
+}
+
+.panel-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(27, 27, 27, 0.3);
+  z-index: 1;
+  transition: background 0.4s ease;
+}
+
+.panel:hover .panel-overlay {
+  background: rgba(27, 27, 27, 0.15);
+}
+
+.panel-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.panel-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-text-light);
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Panel dividers — thin vertical lines between panels */
+.panel:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  right: 0;
+  bottom: 15%;
+  width: 1px;
+  background: rgba(234, 229, 219, 0.2);
+  z-index: 3;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 85vh;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 12vw, 5rem);
+  }
+
+  /* Keep panels as 3 columns on mobile — the video is one unified background */
+  .panels-section {
+    height: 30vh;
+    min-height: 180px;
+  }
+
+  .panels-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+  }
+
+  .panel-title {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+  }
+
+  .panel-content {
+    gap: 0.75rem;
+  }
+
+  .panel-content .section-btn {
+    font-size: 0.65rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .panel:not(:last-child)::after {
+    top: 20%;
+    bottom: 20%;
+  }
+}

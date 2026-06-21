@@ -1,0 +1,310 @@
+/* ========================================================================
+   ServicePage.css — Shared styles for Strength / Boxing / Pilates pages
+   ======================================================================== */
+
+/* ── Hero subtitle (below the big word) ── */
+.hero-subtitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 300;
+  color: var(--color-text-light);
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
+  margin-top: -1rem;
+}
+
+/* ========== The Training Section ========== */
+.svc-training {
+  background: var(--color-bg-light);
+  padding: 5rem 3rem;
+}
+
+.svc-training__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.svc-training__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-text-dark);
+  line-height: 1.05;
+  margin-bottom: 2rem;
+}
+
+.svc-training__para {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--color-text-dark);
+  margin-bottom: 1.2rem;
+  opacity: 0.9;
+}
+
+.svc-training__media img {
+  width: 100%;
+  max-width: 540px;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ========== Meet Your Coach / Instructor ========== */
+.svc-coach {
+  background: var(--color-bg-dark);
+  padding: 5rem 3rem;
+}
+
+.svc-coach__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.svc-coach__photo img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+.svc-coach__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-text-light);
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.svc-coach__para {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--color-text-light);
+  margin-bottom: 1.2rem;
+  opacity: 0.9;
+}
+
+.svc-coach__tagline {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--color-text-light);
+  margin-top: 1rem;
+  opacity: 0.85;
+}
+
+/* ========== Features / "What it's for" Section ========== */
+.svc-features {
+  background: var(--color-bg-light);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.svc-features__heading {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  color: var(--color-text-dark);
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.svc-features__grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.svc-features__item-wrapper {
+  display: flex;
+  align-items: stretch;
+  flex: 1;
+}
+
+.svc-features__divider {
+  width: 1px;
+  align-self: stretch;
+  border-left: 2px dotted rgba(27, 27, 27, 0.2);
+  margin: 1rem 0;
+}
+
+.svc-features__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  flex: 1;
+}
+
+.svc-features__icon {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-dark);
+}
+
+.svc-features__icon svg,
+.svc-features__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.svc-features__label {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  margin-bottom: 0.3rem;
+}
+
+.svc-features__sublabel {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--color-text-dark);
+  opacity: 0.7;
+}
+
+/* ========== CTA ========== */
+.svc-cta {
+  background: var(--color-bg-dark);
+  padding: 5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.svc-cta__oval {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 3.5rem 4rem;
+}
+
+/* Decorative oval */
+.svc-cta__oval::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 560px;
+  height: 320px;
+  border: 1px solid rgba(234, 229, 219, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.svc-cta__heading {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: var(--color-text-light);
+  line-height: 1.2;
+  max-width: 700px;
+}
+
+.svc-cta__sub {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--color-text-light);
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+}
+
+.svc-cta__btn {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  padding: 1rem 2.5rem;
+  background: var(--color-bg-light);
+  color: var(--color-text-dark);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.svc-cta__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .svc-training {
+    padding: 3rem 1.5rem;
+  }
+
+  .svc-training__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .svc-training__media img {
+    max-width: 100%;
+  }
+
+  .svc-coach {
+    padding: 3rem 1.5rem;
+  }
+
+  .svc-coach__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .svc-coach__photo {
+    order: -1;
+  }
+
+  .svc-coach__photo img {
+    max-width: 100%;
+  }
+
+  .svc-features__grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .svc-features__item-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .svc-features__divider {
+    width: 60%;
+    height: 1px;
+    border-left: none;
+    border-top: 2px dotted rgba(27, 27, 27, 0.2);
+    margin: 0 auto;
+  }
+
+  .svc-cta__oval::before {
+    width: 90vw;
+    height: 220px;
+  }
+}

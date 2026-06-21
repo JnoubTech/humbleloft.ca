@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+
+/* ========== CSS Reset & Global Styles ========== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color Palette - Humble Loft */
+  --color-bg-dark: #1b1b1b;
+  --color-bg-light: #f5f0ea;
+  --color-text-light: #eae5db;
+  --color-text-dark: #1b1b1b;
+  --color-accent: #c9b99a;
+  --color-navbar-bg: #2a2a2a;
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', 'Georgia', serif;
+
+  /* Spacing */
+  --navbar-height: 100px;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Prevent iOS auto-zoom on inputs */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-serif);
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  min-height: 100vh;
+  line-height: 1.6;
+  /* Prevent horizontal scrollbar on mobile */
+  overflow-x: hidden;
+  /* Smooth scrolling momentum on iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ========== Mobile-First Global Utilities ========== */
+/* All images and videos should never overflow their container */
+img,
+video,
+svg,
+canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent anything from causing horizontal overflow */
+.app {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Make all sections respect viewport width */
+section {
+  width: 100%;
+  max-width: 100vw;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+  /* Larger tap targets on mobile */
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Ensure inputs don't zoom on iOS (minimum 16px) */
+input, select, textarea, button {
+  font-size: 16px;
+}
+
+/* ========== Scroll-Triggered Animations ========== */
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays for child elements */
+.fade-in-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+.fade-in-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+.fade-in-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+
+/* Hero entrance animation */
+@keyframes heroFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-section .hero-content {
+  animation: heroFadeIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes heroBgZoom {
+  0% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.hero-section .hero-bg {
+  animation: heroBgZoom 12s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Section divider fade-line animation */
+@keyframes lineGrow {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+/* Smooth page transitions for routed content */
+.app {
+  animation: pageFadeIn 0.5s ease forwards;
+}
+
+@keyframes pageFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* ========== Global Mobile Responsive ========== */
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 70px;
+  }
+
+  /* Reduce all padding globally on mobile */
+  body {
+    font-size: 15px;
+  }
+
+  /* Ensure hero sections fit mobile viewport nicely */
+  .hero-section {
+    min-height: 70vh;
+  }
+
+  /* All grid-based sections should stack vertically */
+  .about-split,
+  .svc-training__inner,
+  .svc-coach__inner,
+  .trainer-card__inner,
+  .contact-methods__grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Ensure no horizontal overflow from fixed-width elements */
+  .svc-cta__oval::before,
+  .trainers-cta__oval::before,
+  .space-cta__oval::before,
+  .contact-cta__oval::before,
+  .contact-hero__oval::before,
+  .contact-hero__oval::after,
+  .contact-methods__oval::before {
+    max-width: 95vw;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  :root {
+    --navbar-height: 60px;
+  }
+
+  /* Even tighter padding on very small screens */
+  .svc-training,
+  .svc-coach {
+    padding: 2.5rem 1rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 14vw, 4rem) !important;
+  }
+
+  .panel-title {
+    font-size: clamp(1.8rem, 8vw, 3rem) !important;
+  }
+
+  /* Make all CTA buttons full width on small phones */
+  .svc-cta__btn,
+  .trainers-cta__btn,
+  .space-cta__btn,
+  .contact-cta__btn,
+  .about-cta__btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-on-scroll,
+  .hero-section .hero-content,
+  .hero-section .hero-bg,
+  .app {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
