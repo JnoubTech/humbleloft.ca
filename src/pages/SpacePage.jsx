@@ -8,8 +8,8 @@ const equipmentSections = [
     id: 'machines',
     title: 'MACHINES',
     images: [
-      { src: '/images/extracted/space/space_image_05.jpg', alt: 'Cable machine' },
-      { src: '/images/extracted/space/space_image_04.jpg', alt: 'Gym machines' },
+      { src: `${import.meta.env.BASE_URL}images/extracted/space/space_image_05.jpg`, alt: 'Cable machine' },
+      { src: `${import.meta.env.BASE_URL}images/extracted/space/space_image_04.jpg`, alt: 'Gym machines' },
     ],
     description: [
       "Assault bike, treadmill, rower, double cable machine, lat pulldown/low row, leg extension/curl AND power cage...",
@@ -20,7 +20,7 @@ const equipmentSections = [
     id: 'free-weights',
     title: 'FREE WEIGHTS',
     images: [
-      { src: '/images/extracted/space/space_image_11.jpg', alt: 'Free weights area' },
+      { src: `${import.meta.env.BASE_URL}images/extracted/space/space_image_11.jpg`, alt: 'Free weights area' },
     ],
     description: [
       "Full dumbbell rack (5–100 lbs), Olympic barbell and plates, EZ curl bar, trap bar, kettlebells, resistance bands AND adjustable benches...",
@@ -31,7 +31,7 @@ const equipmentSections = [
     id: 'pilates',
     title: 'PILATES',
     images: [
-      { src: '/images/extracted/space/space_image_08.jpg', alt: 'Pilates reformer studio' },
+      { src: `${import.meta.env.BASE_URL}images/extracted/space/space_image_08.jpg`, alt: 'Pilates reformer studio' },
     ],
     description: [
       "Balanced Body reformer, yoga mats, Pilates rings, resistance bands, foam rollers AND stability balls...",
@@ -42,7 +42,7 @@ const equipmentSections = [
     id: 'combat-sports',
     title: 'COMBAT SPORTS',
     images: [
-      { src: '/images/extracted/space/space_image_06.jpg', alt: 'Boxing and Muay Thai area' },
+      { src: `${import.meta.env.BASE_URL}images/extracted/space/space_image_06.jpg`, alt: 'Boxing and Muay Thai area' },
     ],
     description: [
       "Foam mats, freestanding heavy bag, Thai pads, focus mitts, striking paddles, boxing gloves, and shin guards - all provided.",
@@ -108,7 +108,7 @@ function SpacePage() {
       <section className="hero-section" id="space-hero">
         <video
           className="hero-video-bg"
-          src="/images/extracted/space/space_video_hero.mp4"
+          src={`${import.meta.env.BASE_URL}images/extracted/space/space_video_hero.mp4`}
           autoPlay
           loop
           muted
@@ -121,7 +121,7 @@ function SpacePage() {
       </section>
 
       {/* Accordion Equipment Section */}
-      <section className="space-accordion-section" id="equipment" style={{ backgroundImage: 'url(/images/extracted/space/space_image_07.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section className="space-accordion-section" id="equipment" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/extracted/space/space_image_07.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="space-accordion-wrapper">
           {equipmentSections.map((section, index) => (
             <AccordionItem
@@ -139,7 +139,7 @@ function SpacePage() {
         <div className="space-features__grid">
           <div className="space-feature fade-in-on-scroll">
             <div className="space-feature__icon">
-              <img src="/images/extracted/space/space_image_09.png" alt="No waiting icon" />
+              <img src={`${import.meta.env.BASE_URL}images/extracted/space/space_image_09.png`} alt="No waiting icon" />
             </div>
             <p className="space-feature__text">
               No waiting on machines, no shared equipment - just you, your trainer and your goals.
@@ -150,7 +150,7 @@ function SpacePage() {
 
           <div className="space-feature fade-in-on-scroll">
             <div className="space-feature__icon">
-              <img src="/images/extracted/space/space_image_03.png" alt="Equipment icon" />
+              <img src={`${import.meta.env.BASE_URL}images/extracted/space/space_image_03.png`} alt="Equipment icon" />
             </div>
             <p className="space-feature__text">
               Between free weights, machines, reformer/mats, gloves/shin guards...
@@ -162,7 +162,7 @@ function SpacePage() {
 
           <div className="space-feature fade-in-on-scroll">
             <div className="space-feature__icon">
-              <img src="/images/extracted/space/space_image_10.png" alt="Two spaces icon" />
+              <img src={`${import.meta.env.BASE_URL}images/extracted/space/space_image_10.png`} alt="Two spaces icon" />
             </div>
             <p className="space-feature__text">
               Two distinct spaces under one roof. Our gym and boxing area

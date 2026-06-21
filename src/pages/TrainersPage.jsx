@@ -18,8 +18,8 @@ const trainers = [
       'Athletic Training (1on1)',
       'Online Coaching',
     ],
-    video: '/images/extracted/trainers/trainers_video_03.mp4',
-    image: '/images/extracted/trainers/trainers_image_01.jpg',
+    video: `${import.meta.env.BASE_URL}images/extracted/trainers/trainers_video_03.mp4`,
+    image: `${import.meta.env.BASE_URL}images/extracted/trainers/trainers_image_01.jpg`,
     imageAlt: 'Liam Thiru',
     theme: 'light',
     photoSide: 'right',
@@ -39,8 +39,8 @@ const trainers = [
       'Reformer Pilates (1on1)',
       'Online Coaching AND Nutrition Coaching',
     ],
-    video: '/images/extracted/trainers/trainers_video_01.mp4',
-    image: '/images/extracted/trainers/trainers_image_03.jpg',
+    video: `${import.meta.env.BASE_URL}images/extracted/trainers/trainers_video_01.mp4`,
+    image: `${import.meta.env.BASE_URL}images/extracted/trainers/trainers_image_03.jpg`,
     imageAlt: 'Hannah Badin',
     theme: 'dark',
     photoSide: 'left',
@@ -117,7 +117,7 @@ function TrainersPage() {
       <section className="hero-section" id="trainers-hero">
         <video
           className="hero-video-bg"
-          src="/images/extracted/trainers/trainers_video_02.mp4"
+          src={`${import.meta.env.BASE_URL}images/extracted/trainers/trainers_video_02.mp4`}
           autoPlay
           loop
           muted

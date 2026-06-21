@@ -11,7 +11,7 @@ function HomePage() {
       <section className="hero-section" id="hero">
         <video
           className="hero-video-bg"
-          src="/images/extracted/home/home_video_00.mp4"
+          src={`${import.meta.env.BASE_URL}images/extracted/home/home_video_00.mp4`}
           autoPlay
           loop
           muted
@@ -30,7 +30,7 @@ function HomePage() {
       <section className="hero-section" id="expert-trainers">
         <video
           className="hero-video-bg"
-          src="/images/extracted/home/home_video_03.mp4"
+          src={`${import.meta.env.BASE_URL}images/extracted/home/home_video_03.mp4`}
           autoPlay
           loop
           muted
@@ -49,7 +49,7 @@ function HomePage() {
       <section className="hero-section" id="private-studio">
         <video
           className="hero-video-bg"
-          src="/images/extracted/home/home_video_01.mp4"
+          src={`${import.meta.env.BASE_URL}images/extracted/home/home_video_01.mp4`}
           autoPlay
           loop
           muted
@@ -68,7 +68,7 @@ function HomePage() {
       <section className="panels-section" id="panels">
         <video
           className="panels-video-bg"
-          src="/images/extracted/home/home_video_02.mp4"
+          src={`${import.meta.env.BASE_URL}images/extracted/home/home_video_02.mp4`}
           autoPlay
           loop
           muted

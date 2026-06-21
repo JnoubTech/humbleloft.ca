@@ -81,7 +81,7 @@ function Navbar() {
         <div className="navbar-logo" id="navbar-logo">
           <Link to="/" onClick={closeMenu}>
             <img
-              src="/images/hl-logo.png"
+              src={`${import.meta.env.BASE_URL}images/hl-logo.png`}
               alt="Humble Loft"
             />
           </Link>

@@ -10,7 +10,7 @@ function AboutPage() {
       <section className="hero-section" id="about-hero">
         <video
           className="hero-video-bg"
-          src="/images/extracted/about/about_video_00.mp4"
+          src={`${import.meta.env.BASE_URL}images/extracted/about/about_video_00.mp4`}
           autoPlay
           loop
           muted
@@ -38,7 +38,7 @@ function AboutPage() {
           </div>
           <div className="about-split__image">
             <img
-              src="/images/extracted/about/about_image_03.png"
+              src={`${import.meta.env.BASE_URL}images/extracted/about/about_image_03.png`}
               alt="The Humble Loft gym space"
             />
           </div>
@@ -58,7 +58,7 @@ function AboutPage() {
           </div>
           <div className="about-split__image">
             <img
-              src="/images/extracted/about/about_image_00.png"
+              src={`${import.meta.env.BASE_URL}images/extracted/about/about_image_00.png`}
               alt="Pilates reformer room"
             />
           </div>
@@ -71,7 +71,7 @@ function AboutPage() {
           <div className="feature-card">
             <div className="feature-image">
               <img
-                src="/images/extracted/about/about_image_02.png"
+                src={`${import.meta.env.BASE_URL}images/extracted/about/about_image_02.png`}
                 alt="Session packages"
               />
             </div>
@@ -83,7 +83,7 @@ function AboutPage() {
           <div className="feature-card">
             <div className="feature-image">
               <img
-                src="/images/extracted/about/about_image_04.png"
+                src={`${import.meta.env.BASE_URL}images/extracted/about/about_image_04.png`}
                 alt="Private studio"
               />
             </div>
@@ -95,7 +95,7 @@ function AboutPage() {
           <div className="feature-card">
             <div className="feature-image">
               <img
-                src="/images/extracted/about/about_image_05.png"
+                src={`${import.meta.env.BASE_URL}images/extracted/about/about_image_05.png`}
                 alt="Personalized programming"
               />
             </div>
