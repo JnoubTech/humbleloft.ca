@@ -12,6 +12,11 @@
   max-height: 90vh;
   overflow: visible;
   color: var(--color-text-light);
+  /* Explicit centering (CSS reset strips UA defaults) */
+  margin: auto;
+  position: fixed;
+  inset: 0;
+  height: fit-content;
 }
 
 .booking-dialog::backdrop {
