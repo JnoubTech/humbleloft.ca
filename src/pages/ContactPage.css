@@ -55,7 +55,7 @@
 .contact-hero__title {
   font-family: var(--font-serif);
   font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: 300;
+  font-weight: 500;
   font-style: italic;
   color: var(--color-text-dark);
   line-height: 1.05;

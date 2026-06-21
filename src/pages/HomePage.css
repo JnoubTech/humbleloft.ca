@@ -59,7 +59,7 @@
 .hero-title {
   font-family: var(--font-serif);
   font-size: clamp(3.5rem, 10vw, 8.5rem);
-  font-weight: 300;
+  font-weight: 500;
   font-style: italic;
   color: var(--color-text-light);
   letter-spacing: 0.08em;
@@ -171,7 +171,7 @@
 .panel-title {
   font-family: var(--font-serif);
   font-size: clamp(2.5rem, 5vw, 5rem);
-  font-weight: 300;
+  font-weight: 500;
   font-style: italic;
   color: var(--color-text-light);
   letter-spacing: 0.06em;
