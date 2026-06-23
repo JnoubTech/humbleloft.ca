@@ -9,8 +9,8 @@ const boxingConfig = {
   training: {
     heading: 'THE TRAINING',
     paragraphs: [
-      "Learn to strike with purpose. Boxing fundamentals, Muay Thai technique, pad work, bag work and sparring — all in a private setting with a real fighter and coach.",
-      "Whether you're training for fitness, self-defense, or competition — each session is tailored to your level and your goals.",
+      "Learn to strike with purpose. Boxing fundamentals, Muay Thai technique, pad work, bag work and sparring - all in a private setting with a real fighter and coach.",
+      "Whether you're training for fitness, self-defense, or competition - each session is tailored to your level and your goals.",
     ],
     video: `${import.meta.env.BASE_URL}images/extracted/boxing/boxing_video_01.mp4`,
     imageAlt: 'Boxing training session',

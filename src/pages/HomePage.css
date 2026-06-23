@@ -59,7 +59,7 @@
 .hero-title {
   font-family: var(--font-serif);
   font-size: clamp(3.5rem, 10vw, 8.5rem);
-  font-weight: 500;
+  font-weight: 700;
   font-style: italic;
   color: var(--color-text-light);
   letter-spacing: 0.08em;
@@ -171,7 +171,7 @@
 .panel-title {
   font-family: var(--font-serif);
   font-size: clamp(2.5rem, 5vw, 5rem);
-  font-weight: 500;
+  font-weight: 700;
   font-style: italic;
   color: var(--color-text-light);
   letter-spacing: 0.06em;
@@ -179,7 +179,7 @@
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Panel dividers — thin vertical lines between panels */
+/* Panel dividers - thin vertical lines between panels */
 .panel:not(:last-child)::after {
   content: '';
   position: absolute;
@@ -201,7 +201,7 @@
     font-size: clamp(2.5rem, 12vw, 5rem);
   }
 
-  /* Keep panels as 3 columns on mobile — the video is one unified background */
+  /* Keep panels as 3 columns on mobile - the video is one unified background */
   .panels-section {
     height: 30vh;
     min-height: 180px;

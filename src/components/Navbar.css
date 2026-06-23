@@ -18,7 +18,7 @@
               height 0.4s ease;
 }
 
-/* ── Light-page adaptation ──
+/* -- Light-page adaptation --
    When the page has a light background at the top, flip navbar
    text to dark while transparent. Once scrolled, dark bg kicks in
    and text returns to light automatically. */
@@ -30,11 +30,13 @@
   color: var(--color-bg-dark);
 }
 
-[data-theme="light"] .navbar:not(.navbar--scrolled) .navbar-hamburger span {
-  background-color: var(--color-text-dark);
+@media (min-width: 769px) {
+  [data-theme="light"] .navbar:not(.navbar--scrolled) .navbar-hamburger span {
+    background-color: var(--color-text-dark);
+  }
 }
 
-/* Scrolled state — solid background + shadow */
+/* Scrolled state - solid background + shadow */
 .navbar--scrolled {
   background-color: rgba(27, 27, 27, 0.95);
   backdrop-filter: blur(12px);
@@ -122,7 +124,7 @@
   transform-origin: center;
 }
 
-/* Hamburger → X animation */
+/* Hamburger -> X animation */
 .navbar-hamburger.active span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -211,7 +213,7 @@
 
 /* Mobile - switch to hamburger */
 @media (max-width: 768px) {
-  /* On mobile, navbar always has a solid dark background — no transparent state */
+  /* On mobile, navbar always has a solid dark background - no transparent state */
   .navbar {
     justify-content: space-between;
     padding: 0 1.25rem;
@@ -219,7 +221,7 @@
     background-color: var(--color-bg-dark);
   }
 
-  /* No height change on scroll for mobile — prevents the hiccup */
+  /* No height change on scroll for mobile - prevents the hiccup */
   .navbar--scrolled {
     height: var(--navbar-height);
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
@@ -251,7 +253,7 @@
     height: 45px;
   }
 
-  /* No logo shrink on mobile — keeps it stable */
+  /* No logo shrink on mobile - keeps it stable */
   .navbar--scrolled .navbar-logo img {
     height: 45px;
   }

@@ -34,6 +34,42 @@
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
 }
 
+/* Photo header - role / name / specialties above video */
+.trainer-card__photo-header {
+  margin-bottom: 1.2rem;
+}
+
+.trainer-card__photo-role {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.25rem;
+  opacity: 0.75;
+}
+
+.trainer-card__photo-name {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 0.3rem;
+}
+
+.trainer-card--light .trainer-card__photo-name {
+  color: var(--color-text-dark);
+}
+
+.trainer-card--dark .trainer-card__photo-name {
+  color: var(--color-text-light);
+}
+
+.trainer-card__photo-specialties {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
 .trainer-card__role {
   font-size: 0.95rem;
   font-weight: 400;
@@ -45,7 +81,7 @@
 .trainer-card__name {
   font-family: var(--font-serif);
   font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 0.5rem;
 }
@@ -67,13 +103,13 @@
 }
 
 .trainer-card__bio {
-  font-size: 1.15rem;
-  line-height: 1.65;
+  font-size: 1.35rem;
+  line-height: 1.7;
   margin-bottom: 1.4rem;
 }
 
 .trainer-card__services-label {
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-weight: 500;
   margin-bottom: 0.6rem;
 }
@@ -85,7 +121,7 @@
 }
 
 .trainer-card__services li {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   line-height: 1.8;
 }
 

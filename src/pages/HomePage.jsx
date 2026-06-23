@@ -7,7 +7,7 @@ function HomePage() {
     <div className="app">
       <Navbar />
 
-      {/* Section 1: Hero — HUMBLE LOFT */}
+      {/* Section 1: Hero - HUMBLE LOFT */}
       <section className="hero-section" id="hero">
         <video
           className="hero-video-bg"
@@ -64,7 +64,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Section 4: LIFT / STRIKE / FLOW — 3-Panel Grid */}
+      {/* Section 4: LIFT / STRIKE / FLOW - 3-Panel Grid */}
       <section className="panels-section" id="panels">
         <video
           className="panels-video-bg"

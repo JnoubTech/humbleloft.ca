@@ -9,7 +9,7 @@ const strengthConfig = {
   training: {
     heading: 'THE TRAINING',
     paragraphs: [
-      "Build real strength. Hypertrophy, powerlifting, functional training — all programmed around your goals by a certified trainer in a private studio.",
+      "Build real strength. Hypertrophy, powerlifting, functional training - all programmed around your goals by a certified trainer in a private studio.",
       "No cookie-cutter plans. No crowded gym floors. Just focused, 1-on-1 coaching with full access to commercial-grade equipment.",
     ],
     video: `${import.meta.env.BASE_URL}images/extracted/strength/strength_video_02.mp4`,
@@ -19,7 +19,7 @@ const strengthConfig = {
     heading: 'CHOOSE YOUR COACH',
     paragraphs: [
       "All strength sessions are coached by Liam and Hannah : NASM and CanFitPro certified trainers with backgrounds in athletics, kinesiology and competitive sports.",
-      "Whether your goal is muscle gain, fat loss, injury rehab or athletic performance — your program is built for you.",
+      "Whether your goal is muscle gain, fat loss, injury rehab or athletic performance - your program is built for you.",
     ],
     tagline: "Your goals. Your pace. Your session.",
     video: `${import.meta.env.BASE_URL}images/extracted/strength/strength_video_01.mp4`,

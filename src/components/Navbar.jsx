@@ -108,7 +108,7 @@ function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Menu Overlay — OUTSIDE the nav so it's not trapped in the nav's stacking context */}
+      {/* Mobile Menu Overlay - OUTSIDE the nav so it's not trapped in the nav's stacking context */}
       <div
         className={`navbar-mobile-menu ${menuOpen ? 'open' : ''}`}
         id="navbar-mobile-menu"

@@ -26,7 +26,7 @@ function ServicePage({ config }) {
     <div className="app">
       <Navbar />
 
-      {/* ── Hero ── */}
+      {/* -- Hero -- */}
       <section className="hero-section" id="service-hero">
         {hero.bgVideo ? (
           <video
@@ -50,7 +50,7 @@ function ServicePage({ config }) {
         </div>
       </section>
 
-      {/* ── The Training ── */}
+      {/* -- The Training -- */}
       <section className="svc-training" id="service-training">
         <div className="svc-training__inner">
           <div className="svc-training__text fade-in-on-scroll">
@@ -69,10 +69,11 @@ function ServicePage({ config }) {
         </div>
       </section>
 
-      {/* ── Meet Your Coach / Instructor ── */}
+      {/* -- Meet Your Coach / Instructor -- */}
       <section className="svc-coach" id="service-coach">
         <div className="svc-coach__inner">
           <div className="svc-coach__photo fade-in-on-scroll">
+            <h2 className="svc-coach__heading">{coach.heading}</h2>
             {coach.video ? (
               <video src={coach.video} autoPlay loop muted playsInline />
             ) : (
@@ -80,7 +81,6 @@ function ServicePage({ config }) {
             )}
           </div>
           <div className="svc-coach__text fade-in-on-scroll">
-            <h2 className="svc-coach__heading">{coach.heading}</h2>
             {coach.paragraphs.map((p, i) => (
               <p key={i} className="svc-coach__para">{p}</p>
             ))}
@@ -91,7 +91,7 @@ function ServicePage({ config }) {
         </div>
       </section>
 
-      {/* ── Features / What it's for ── */}
+      {/* -- Features / What it's for -- */}
       <section className="svc-features" id="service-features">
         {features.heading && (
           <h3 className="svc-features__heading">{features.heading}</h3>
@@ -114,7 +114,7 @@ function ServicePage({ config }) {
         </div>
       </section>
 
-      {/* ── CTA ── */}
+      {/* -- CTA -- */}
       <section className="svc-cta" id="service-cta">
         <div className="svc-cta__oval">
           <p className="svc-cta__heading">{cta.heading}</p>

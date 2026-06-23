@@ -32,7 +32,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
 
-        {/* Global booking UI — visible on all pages */}
+        {/* Global booking UI - visible on all pages */}
         <FloatingBookButton
           onClick={openBooking}
           hidden={bookingOpen}

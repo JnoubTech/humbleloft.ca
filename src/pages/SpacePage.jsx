@@ -24,8 +24,8 @@ const equipmentSections = [
       { src: `${import.meta.env.BASE_URL}images/extracted/space/space_image_11.jpg`, alt: 'Free weights area' },
     ],
     description: [
-      "Full dumbbell rack (5–100 lbs), Olympic barbell and plates, EZ curl bar, trap bar, kettlebells, resistance bands AND adjustable benches...",
-      "Everything you need to train — no substitutions, no waiting.",
+      "Adjustable dumbbells from 5-80 lb, kettlebells from 5-80 lb, incline/decline adjustable bench, Olympic barbell and plates, EZ curl bar, trap bar, resistance bands...",
+      "Everything you need to train - no substitutions, no waiting.",
     ],
   },
   {
@@ -35,8 +35,8 @@ const equipmentSections = [
       { src: `${import.meta.env.BASE_URL}images/extracted/space/space_image_08.jpg`, alt: 'Pilates reformer studio' },
     ],
     description: [
-      "Balanced Body reformer, yoga mats, Pilates rings, resistance bands, foam rollers AND stability balls...",
-      "A fully equipped Pilates studio in its own dedicated, quiet space — separate from the gym floor.",
+      "Custom reformer, yoga mats, Pilates rings, resistance bands, foam rollers AND stability balls...",
+      "A fully equipped Pilates studio in its own dedicated, quiet space - separate from the gym floor.",
     ],
   },
   {
@@ -106,7 +106,7 @@ function SpacePage() {
     <div className="app">
       <Navbar />
 
-      {/* Hero — THE STUDIO */}
+      {/* Hero - THE STUDIO */}
       <section className="hero-section" id="space-hero">
         <video
           className="hero-video-bg"
@@ -174,7 +174,7 @@ function SpacePage() {
         </div>
       </section>
 
-      {/* CTA — See it for yourself */}
+      {/* CTA - See it for yourself */}
       <section className="space-cta" id="space-cta">
         <div className="space-cta__oval">
           <p className="space-cta__heading">See it for yourself.</p>

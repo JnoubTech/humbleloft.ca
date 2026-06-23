@@ -54,6 +54,11 @@ function TrainerCard({ trainer }) {
 
   const photoBlock = (
     <div className="trainer-card__photo fade-in-on-scroll">
+      <div className="trainer-card__photo-header">
+        <p className="trainer-card__photo-role">{trainer.role}</p>
+        <h3 className="trainer-card__photo-name">{trainer.name}</h3>
+        <p className="trainer-card__photo-specialties">{trainer.specialties}</p>
+      </div>
       {trainer.video ? (
         <video
           src={trainer.video}
@@ -71,10 +76,6 @@ function TrainerCard({ trainer }) {
 
   const textBlock = (
     <div className="trainer-card__text fade-in-on-scroll">
-      <p className="trainer-card__role">{trainer.role}</p>
-      <h2 className="trainer-card__name">{trainer.name}</h2>
-      <p className="trainer-card__specialties">{trainer.specialties}</p>
-
       {trainer.bio.map((paragraph, i) => (
         <p key={i} className="trainer-card__bio">{paragraph}</p>
       ))}

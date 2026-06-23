@@ -9,7 +9,7 @@ function AboutPage() {
     <div className="app">
       <Navbar />
 
-      {/* Section 1: Hero — ABOUT HUMBLE LOFT */}
+      {/* Section 1: Hero - ABOUT HUMBLE LOFT */}
       <section className="hero-section" id="about-hero">
         <video
           className="hero-video-bg"
@@ -27,7 +27,7 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Section 2: WHAT WE ARE — light bg, text left / image right */}
+      {/* Section 2: WHAT WE ARE - light bg, text left / image right */}
       <section className="about-split about-split--light" id="what-we-are">
         <div className="about-split__inner">
           <div className="about-split__text">
@@ -48,7 +48,7 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Section 3: WHY WE BUILT IT — dark bg, image left / text right */}
+      {/* Section 3: WHY WE BUILT IT - dark bg, image left / text right */}
       <section className="about-split about-split--dark about-split--reverse" id="why-we-built-it">
         <div className="about-split__inner">
           <div className="about-split__text">
@@ -68,7 +68,7 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Section 4: Feature Cards — 3 columns with images */}
+      {/* Section 4: Feature Cards - 3 columns with images */}
       <section className="about-features" id="features">
         <div className="about-features__grid">
           <div className="feature-card">
@@ -109,7 +109,7 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Section 5: CTA — DM TO BOOK */}
+      {/* Section 5: CTA - DM TO BOOK */}
       <section className="about-cta" id="about-cta">
         <p className="about-cta__text">No crowds. No contracts. Just training.</p>
         <button className="about-cta__btn" onClick={openBooking}>

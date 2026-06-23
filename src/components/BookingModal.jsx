@@ -120,7 +120,7 @@ function BookingModal({ isOpen, onClose }) {
         {/* Body */}
         <div className="booking-modal__body">
           {submitted ? (
-            /* ── Success State ── */
+            /* -- Success State -- */
             <div className="booking-success">
               <div className="booking-success__icon">
                 <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -136,7 +136,7 @@ function BookingModal({ isOpen, onClose }) {
             </div>
           ) : (
             <>
-              {/* ── Booking Method Tabs ── */}
+              {/* -- Booking Method Tabs -- */}
               <div className="booking-tabs">
                 <button
                   className={`booking-tab ${tab === 'form' ? 'booking-tab--active' : ''}`}
@@ -168,12 +168,12 @@ function BookingModal({ isOpen, onClose }) {
                 </button>
               </div>
 
-              {/* ── Instagram Panel ── */}
+              {/* -- Instagram Panel -- */}
               {tab === 'instagram' && (
                 <div className="booking-instagram">
                   <p className="booking-instagram__text">
                     Send us a DM on Instagram and we&apos;ll get you booked in.<br />
-                    Quick, easy — no forms needed.
+                    Quick, easy - no forms needed.
                   </p>
                   <a
                     href="https://ig.me/m/humbleloft"
@@ -191,7 +191,7 @@ function BookingModal({ isOpen, onClose }) {
                 </div>
               )}
 
-              {/* ── Form Panel ── */}
+              {/* -- Form Panel -- */}
               {tab === 'form' && (
                 <form
                   className="booking-form"

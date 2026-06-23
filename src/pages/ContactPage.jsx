@@ -3,7 +3,7 @@ import { useScrollAnimations } from '../hooks/useScrollAnimations';
 import { useBooking } from '../hooks/useBooking';
 import './ContactPage.css';
 
-/* ── SVG Icons ── */
+/* -- SVG Icons -- */
 const InstagramIcon = () => (
   <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <rect x="8" y="8" width="48" height="48" rx="12" />
@@ -68,7 +68,7 @@ function ContactPage() {
     <div className="app" data-theme="light">
       <Navbar />
 
-      {/* ── Get In Touch Hero ── */}
+      {/* -- Get In Touch Hero -- */}
       <section className="contact-hero" id="contact-hero">
         <div className="contact-hero__oval">
           <p className="contact-hero__sub">Have questions? Ready to train?</p>
@@ -76,7 +76,7 @@ function ContactPage() {
         </div>
       </section>
 
-      {/* ── Contact Methods Grid ── */}
+      {/* -- Contact Methods Grid -- */}
       <section className="contact-methods" id="contact-methods">
         <div className="contact-methods__oval">
           <div className="contact-methods__grid">
@@ -110,7 +110,7 @@ function ContactPage() {
         </div>
       </section>
 
-      {/* ── CTA ── */}
+      {/* -- CTA -- */}
       <section className="contact-cta" id="contact-cta">
         <div className="contact-cta__oval">
           <p className="contact-cta__heading">Your first session starts with a message.</p>

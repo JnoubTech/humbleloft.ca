@@ -1,5 +1,5 @@
 /* ========================================================================
-   FloatingBookButton.css — Fixed-position Book Now button
+   FloatingBookButton.css - Fixed-position Book Now button
    ======================================================================== */
 
 .floating-book-btn {
@@ -97,7 +97,7 @@
   }
 }
 
-/* Small phones — stay compact */
+/* Small phones - stay compact */
 @media (max-width: 380px) {
   .floating-book-btn {
     bottom: 1rem;

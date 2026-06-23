@@ -1,4 +1,4 @@
-/* ========== About Page — Split Sections ========== */
+/* ========== About Page - Split Sections ========== */
 .about-split {
   display: flex;
   align-items: center;
@@ -58,7 +58,7 @@
 .about-split__heading {
   font-family: var(--font-serif);
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  font-weight: 600;
+  font-weight: 700;
   font-style: italic;
   letter-spacing: 0.06em;
   line-height: 1.2;
@@ -101,7 +101,7 @@
   transform: scale(1.02);
 }
 
-/* ========== About Page — Feature Icons ========== */
+/* ========== About Page - Feature Icons ========== */
 .about-features {
   background-color: var(--color-bg-light);
   padding: 4rem 2rem;
@@ -160,7 +160,7 @@
   max-width: 280px;
 }
 
-/* ========== About Page — CTA ========== */
+/* ========== About Page - CTA ========== */
 .about-cta {
   background-color: var(--color-bg-dark);
   padding: 5rem 2rem;
